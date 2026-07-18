@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories 💜</title>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="gallery-page">
+
+   <audio id="bgMusic" autoplay loop>
+    <source src="../assets/music/background.m4a" type="audio/mp4">
+</audio>
+
+    <div class="gallery-container">
+
+        <h1>Our Memories 💜</h1>
+
+        <img
+            id="galleryImage"
+            src="../assets/images/02_Timeline/01_Baby/baby_blue_frock.jpg"
+            alt="Memory"
+        >
+
+        <p id="galleryCaption"></p>
+
+        <div class="gallery-buttons">
+            <button id="prevBtn">⬅ Previous</button>
+            <button id="nextBtn">Next ➜</button>
+        </div>
+
+    </div>
+
+    <script src="../assets/js/gallery.js"></script>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+
+        music.volume = 0.35;
+
+        music.play().catch(() => {
+            document.body.addEventListener("click", () => {
+                music.play();
+            }, { once: true });
+        });
+    </script>
+
+</body>
+</html>
